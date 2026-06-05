@@ -9,7 +9,7 @@
 ]{scrlttr2}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage[ngerman]{babel}		% Uncomment for german locale
+\usepackage[ngerman]{babel}		% Uncomment for german locale
 \usepackage[bottom=0cm]{geometry}	% Allows for more content space
 \usepackage{helvet}			% Use Sans-serif font
 \usepackage{lipsum}
@@ -18,11 +18,11 @@
 \frenchspacing
 \sffamily
 \setlength{\parskip}{1em}			% Set distance between paragraphs
-%\LoadLetterOption{DIN}				% Uncoment to use DIN formatted letter used in Germany
+\setlength{\parindent}{0pt}
+\LoadLetterOption{DIN}				% DIN letter used in Germany
 
 \begin{document}
 
-% Fill in your data:
 \setkomavar{fromname}{<my\_name> <my\_surname>}
 \setkomavar{fromaddress}{<my\_street> <my\_building\_no> \\ <my\_zip\_code> <my\_city>}
 \setkomavar{fromemail}{<my\_email>}
