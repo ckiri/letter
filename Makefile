@@ -1,19 +1,18 @@
-ENGINE = pdflatex
 doc ?= template
+MAIN = ./main.tex
 BUILD_DIR = ./build
-MAIN_TEX = ./main.tex
-CONTENT_TEX = ./content/
-PDF_FILE = $(BUILD_DIR)/$(doc).pdf
+CONTENT_DIR = ./content/
+ENGINE = pdflatex
 
 .PHONY: all clean build_dir
 
-all: $(PDF_FILE)
+all: pdf
 
 build_dir:
 	@mkdir -p $(BUILD_DIR)
 
-$(PDF_FILE): $(MAIN_TEX) $(CONTENT_TEX) build_dir
-	$(ENGINE) -output-directory=$(BUILD_DIR) -jobname=$(doc) "\def\doc{$(doc)} \input{$(MAIN_TEX)}"
+pdf: $(MAIN) $(CONTENT_DIR) build_dir
+	$(ENGINE) -output-directory=$(BUILD_DIR) -jobname=$(doc) "\def\doc{$(doc)} \input{$(MAIN)}"
 
 clean: $(BUILD_DIR)
 	@rm -rf $(BUILD_DIR)/*
