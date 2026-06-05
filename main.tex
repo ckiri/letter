@@ -9,12 +9,14 @@
 ]{scrlttr2}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}		% Uncomment for german locale
+%\usepackage[ngerman]{babel}		% Uncomment for german locale
 \usepackage[bottom=0cm]{geometry}	% Allows for more content space
+\usepackage{graphicx}
 \usepackage{helvet}			% Use Sans-serif font
 \usepackage{lipsum}
 
 \renewcommand{\familydefault}{\sfdefault}	% Override default font
+\renewcommand*{\raggedsignature}{\raggedright}
 \frenchspacing
 \sffamily
 \setlength{\parskip}{1em}			% Set distance between paragraphs
@@ -28,7 +30,7 @@
 \setkomavar{fromemail}{<my\_email>}
 \setkomavar{fromurl}{<my\_url>}
 \setkomavar{fromphone}{<my\_phone\_no>}
-\setkomavar{signature}{<my\_signature>}
+\setkomavar{signature}{ }
 \setkomavar{place}{<my\_place>}
 \setkomavar{date}{\today}
 
